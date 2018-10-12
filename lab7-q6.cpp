@@ -1,42 +1,34 @@
-//Write a C++ program to find reverse of any number using recursion.
-
+//6. Write a C++ program to find reverse of any number using recursion.
 
 #include<iostream>
 
 using namespace std;
 
+//write a function that calculates and returns the remainder of the number after dividing it by 10
 
-int revno(int a){
-     int n;
-  	if(a<1){
+int remainder(int n){
+	int a;
+	if(n%10==0){
+	}
+	else{ 
+		a=n%10;
+		cout<<a;
+		int b=n/10;
+//repeat the above functions by recursion
+			return remainder(b);
 		
- 			return n;
-     		}
-  	else{
- 		  n=a%10;
-		  a=a/10;
-  		  cout<<n;
-  		  revno(a);
-        }
+	}
 }
 
-//write main function
+//write the main function
+int main(){
 
-int  main(){
-  int revno(int a);int a;
-
-//ask the user for input
-
-  cout<<"Enter the number."<<endl;
-
-//Take in the values given by the user
-  cin>>a;
-
-//Print
-
-  cout<<"The reverse of the given number is ";
-  	revno(a);
-
-  return 0;
+int a,z;
+	cout<<"Enter the number to be reversed"<<endl;
+	cin>>a;
+	
+//call the above functions
+	remainder(a);
+	cout<<" is the reverse of the number provided"<<endl;
+return 0;
 }
-
